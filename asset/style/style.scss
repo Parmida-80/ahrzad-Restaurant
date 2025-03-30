@@ -351,39 +351,4 @@ footer {
     line-height: 0px;
     margin-top: 10px;
 }
-///////////////navbar
-nav {
-    @include FUll();
-    position: fixed;
-    z-index: 22;
-   
-    
-}
-.nav{
-    @include flexBox();
-    height: 100%;
-    @include center();
-    position: relative;
-}
 
-.navbar {
-    height: 100%;
-    width: 50%;
-    background-color: red;
-    @include center();
-    transition: all 1s;
-    position: absolute;
-}
-.navbar2{
-    left: -100%;
-    @include flexBox();
-    img{
-        height: 300px;
-    }
-}
-.navbar1{
-    right: -100%;
-}
-.menu:visited .navbar1{
-    right: 60%;
-}
