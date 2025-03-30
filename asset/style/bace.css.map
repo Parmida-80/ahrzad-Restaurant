@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,OAAO,CAAC,woBAAI;AACZ,OAAO,CAAC,msBAAI;AACZ,OAAO,CAAC,msBAAI;AACZ,OAAO,CAAC,0uBAAI",
+    "sources": [
+        "bace.scss"
+    ],
+    "names": [],
+    "file": "bace.css"
+}
