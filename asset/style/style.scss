@@ -37,6 +37,10 @@ header {
         padding-top: 20%;
         ;
     }
+    @media (max-width:400px) {
+        padding-top: 25%;
+        ;
+    }
 
 
     .logo {
@@ -164,12 +168,7 @@ main {
             }
         }
 
-        p {
-            font-size: 40px;
-            font-family: $font-sahel;
-            //line-height: 80px;
-            color: $color-cecendert;
-        }
+
     }
 
     &-Star {
@@ -203,18 +202,22 @@ main {
 .gallery-main {
     @include center();
     @include flexBox(center);
-    flex-wrap: wrap;
+    @media (max-width:600px) {
+       overflow: hidden;
+    }
 
 
     .gallery-card {
         width: 33.3333%;
         height: 30vw;
         position: relative;
-        z-index: 10;
         overflow: hidden;
 
         @media (max-width:800px) {
             width: 50%;
+        }
+        @media (max-width:600px) {
+            width: 100%;
         }
 
 
@@ -222,7 +225,6 @@ main {
             @include FUll();
             object-fit: cover;
             opacity: .8;
-            object-fit: cover;
 
             &:hover {
                 .gallery-card-overlay {
