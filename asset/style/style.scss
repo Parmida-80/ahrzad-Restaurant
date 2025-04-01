@@ -37,6 +37,7 @@ header {
         padding-top: 20%;
         ;
     }
+
     @media (max-width:400px) {
         padding-top: 25%;
         ;
@@ -232,8 +233,8 @@ main {
         transition: left 1s;
         line-height: 40px;
 
-        
-        
+
+
 
         h1 {
             margin-top: 10%;
@@ -241,7 +242,7 @@ main {
             font-size: 50px;
             font-weight: 500;
 
-            
+
         }
     }
 
@@ -249,19 +250,20 @@ main {
         object-fit: cover;
         width: 300px;
         height: 100%;
-        
+
 
         @media (min-width:700px) {
             width: 100%;
             object-fit: cover;
         }
-       
+
     }
 
-    
-  
+
+
 
 }
+
 .btn-gallery {
     width: 150px;
     height: 40px;
@@ -311,4 +313,49 @@ footer {
     line-height: 0px;
     margin-top: 10px;
 }
+
+.menu{
+    position: fixed;
+    z-index: 13;
+    top: 50px;
+    right: 100px;
+
+    
+}
+
+
+/////////////////////
+.nav {
+    @include flexBox(space-around);
+    @include center();
+    position: fixed;
+    @include FUll();
+    z-index: 10;
+    top: 0px;
+
+    .navbar {
+        background-color: $color-darck;
+        width: 50%;
+        height: 100%;
+        position: relative;
+
+
+        img {
+            display: block;
+        }
+
+    }
+}
+
+.navbar1 {
+
+    right: -100%;
+    transition: right 1s;
+}
+
+.navbar2 {
+    left: -100%;
+    transition: left 1s;
+}
+
 
