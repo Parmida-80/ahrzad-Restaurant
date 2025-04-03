@@ -27,6 +27,7 @@ header {
     justify-content: center;
     padding: 5% 10px;
     text-align: center;
+    //padding-top: 50%;
 
     @media (max-width:800px) {
         padding-top: 10%;
@@ -39,7 +40,7 @@ header {
     }
 
     @media (max-width:400px) {
-        padding-top: 25%;
+        padding-top: 30%;
         ;
     }
 
@@ -52,6 +53,18 @@ header {
         width: 100px;
         height: 100px;
         margin: 0 10px;
+
+        @media (max-width:700px) {
+            width: 70px;
+            height: 70px;
+
+            svg {
+                height: 80%;
+                margin: 10% 0;
+            }
+        }
+
+
     }
 
     .Header-baner-text {
@@ -156,7 +169,11 @@ main {
         .about-paragraf {
             font-family: $font-Gulzar;
             font-size: 20px;
-            //line-height: 0;
+
+            @media (max-width:500px) {
+                height: 300px;
+                overflow: auto;
+            }
         }
 
         h1 {
@@ -192,6 +209,11 @@ main {
             @media (max-width:800px) {
                 opacity: .4;
             }
+
+            @media (max-width:800px) {
+                width: 300px;
+                top: 650px;
+            }
         }
 
 
@@ -204,6 +226,7 @@ main {
     @include center();
     @include flexBox(none);
     overflow: scroll;
+    overflow-y: hidden;
 
 
     @media (min-width:700px) {
@@ -213,10 +236,12 @@ main {
 
     .gallery-card {
         position: relative;
-        @include FUll();
+        width: 100%;
+        height: 30vh;
 
         @media (min-width:700px) {
             width: 33.3333%;
+            height: 35vh;
         }
 
         &:hover .gallery-card-overlay {
@@ -231,10 +256,11 @@ main {
         @include FUll();
         left: -100%;
         transition: left 1s;
-        line-height: 40px;
+        line-height: 60px;
 
-
-
+        @media (max-width:700px) {
+            line-height: 50px;
+        }
 
         h1 {
             margin-top: 10%;
@@ -242,9 +268,20 @@ main {
             font-size: 50px;
             font-weight: 500;
 
+            @media (max-width:700px) {
+                font-size: 45px;
+            }
 
         }
+
+        p {
+            font-family: $font-sahel;
+            font-size: 25px;
+
+            font-size: 20px;
+        }
     }
+
 
     img {
         object-fit: cover;
@@ -284,6 +321,13 @@ main {
 ///////////////Foter'
 footer {
     margin: -50px 0 70px;
+
+    @media (max-width:800px) {
+        .Header-baner {
+            margin-top: 0;
+            padding: 0;
+        }
+    }
 }
 
 .social-media {
@@ -292,6 +336,14 @@ footer {
     .social-media-item {
         font-size: 50px;
         list-style: none;
+
+        @media (max-width:500px) {
+            font-size: 40px;
+           
+        }
+        @media (max-width:800px) {
+            margin: 20px 0;
+        }
     }
 }
 
@@ -312,50 +364,212 @@ footer {
     background-color: $color-primery;
     line-height: 0px;
     margin-top: 10px;
+    transform-origin: right;
+    transition: all .5s .5s;
+
+   
+
 }
 
-.menu{
-    position: fixed;
-    z-index: 13;
-    top: 50px;
-    right: 100px;
+.menu {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 25;
 
-    
-}
-
-
-/////////////////////
-.nav {
-    @include flexBox(space-around);
-    @include center();
-    position: fixed;
-    @include FUll();
-    z-index: 10;
-    top: 0px;
-
-    .navbar {
-        background-color: $color-darck;
-        width: 50%;
-        height: 100%;
-        position: relative;
-
-
-        img {
-            display: block;
-        }
-
+    @media (max-width:500px) {
+        right: 20px;
     }
 }
 
-.navbar1 {
+nav {
+    position: relative;
 
-    right: -100%;
-    transition: right 1s;
+    .navbar {
+        @include flexBox();
+
+
+        &-left {
+            width: 50vw;
+            height: 100vh;
+            background-color: $color-darck;
+            position: fixed;
+            left: -50vw;
+            transition: all .5s;
+            @include center;
+            z-index: 22;
+
+            @media (max-width:600px) {
+                padding-top: 50%;
+            }
+        }
+
+        &-right {
+            position: fixed;
+            width: 50vw;
+            height: 100vh;
+            background-color: #1f1d1d;
+            right: -50vw;
+            transition: all .5s;
+            z-index: 22;
+
+
+            ul {
+                margin-top: 10%;
+
+                @media (max-width:600px) {
+                    margin-top: 30%;
+                }
+
+                @media (max-width:400px) {
+                    margin-top: 80%;
+                }
+
+                li {
+                    list-style: none;
+                }
+
+                a {
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                    align-items: center;
+                    text-transform: uppercase;
+                    color: $color-cecendert;
+                    display: block;
+                    margin: 20px;
+                    font-size: 45px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-family: $font-NotoNaskhArabic;
+                    transition: all .5s;
+
+                    @media (max-width:900px) {
+                        font-size: 35px;
+                    }
+
+                    @media (max-width:600px) {
+                        font-size: 30px;
+                    }
+
+                    @media (max-width:400px) {
+                        font-size: 25px;
+                    }
+
+                    &:hover {
+                        color: $color-primery;
+                        letter-spacing: 4px;
+
+                    }
+                }
+
+            }
+
+        }
+    }
 }
 
-.navbar2 {
-    left: -100%;
-    transition: left 1s;
+.checkbox:checked~.navbar .navbar-left {
+    left: 0;
 }
 
+.checkbox:checked~.navbar .navbar-right {
+    right: 0;
+}
 
+.checkbox {
+    display: none;
+}
+
+.left-img-1 {
+    top: 15%;
+    left: 15%;
+
+    @media (max-width:500px) {
+        display: none;
+    }
+}
+
+.left-img-2 {
+    top: 35%;
+    left: 25%;
+
+    @media (max-width:900px) {
+        top: 28%;
+    }
+
+    @media (max-width:600px) {
+        top: 20%;
+    }
+
+    @media (max-width:500px) {
+        display: none;
+    }
+}
+
+.left-img-3 {
+    top: 55%;
+    left: 35%;
+
+    @media (max-width:900px) {
+        top: 40%;
+    }
+
+    @media (max-width:600px) {
+        top: 25%;
+    }
+
+    @media (max-width:500px) {
+        display: none;
+    }
+}
+
+.left-img-4 {
+    @media (min-width:500px) {
+        display: none;
+    }
+
+    filter: drop-shadow(2px 4px 6px black);
+    width: 100%;
+    left: 10%;
+    right: 10%;
+
+}
+
+.left-img {
+    width: 50%;
+    position: absolute;
+    box-shadow: 0 15px 60px rgba($color-black, 0.4);
+    opacity: .7;
+    border-radius: 10px;
+
+    @media (max-width:500px) {
+        box-shadow: none;
+        width: 80%;
+    }
+
+    @media (max-width:600px) {
+        width: 60%;
+    }
+
+}
+
+.menuLabable {
+    position: fixed;
+    transition: transform .5s, -webkit-transform .5s;
+}
+
+.checkbox:checked~.menu .menuLabable {
+    transform: rotateZ(90deg);
+}
+
+.checkbox:checked~.menu .hambergery-line1 {
+    transform: rotateZ(-40deg);
+}
+
+.checkbox:checked~.menu .hambergery-line2 {
+    opacity: 0;
+}
+
+.checkbox:checked~.menu .hambergery-line3 {
+    transform: rotateZ(40deg);
+}
